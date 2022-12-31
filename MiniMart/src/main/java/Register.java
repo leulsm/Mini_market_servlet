@@ -56,8 +56,8 @@ public class Register extends HttpServlet {
 	
 	if(name.equalsIgnoreCase(adminame) && passwordcheck.equalsIgnoreCase(password) && securitykey.equalsIgnoreCase(security_key)) {
 		
-//		HttpSession session=request.getSession();
-//		session.setAttribute("AdminName", adminame);
+		HttpSession session=request.getSession();
+		session.setAttribute("AdminName", adminame);
 		 RequestDispatcher rd=request.getRequestDispatcher("adminpageserv");  
          rd.include(request,response);  
 		
